@@ -47,8 +47,11 @@
             <article class="formulario">
         <p>
           <label for="nombre">Nombre</label>
-          <input type="text" name="nombre" id="nombre" />
+          <input type="text" name="nombre" id="nombre" value="{{old('nombre')}}" />
         </p>
+        @error('nombre')
+            {{ $message }}
+        @enderror
         <p>
           <label>Correo</label>
           <input type="email" name="correo" />

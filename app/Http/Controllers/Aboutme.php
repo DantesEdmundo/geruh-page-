@@ -11,5 +11,14 @@ class Aboutme extends Controller
         return view('Aboutme');
     }
 
-    public function store(Request $request) {}
+    public function store(Request $request)
+    {
+
+        $request->validate([
+            'nombre' => 'required',
+            'correo' => 'required',
+            'telefono' => 'required',
+            'Asunto' => 'required'
+        ]);
+    }
 }
